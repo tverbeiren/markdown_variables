@@ -1,15 +1,13 @@
 ---
 title: Issue 5110
-subtitle: Include markdown content as Quarto variables
+subtitle: Missing markdown formatting in Quarto variables
 ---
 
 ## Introduction
 
-Using [Quarto variables](https://quarto.org/docs/authoring/variables.html) makes a lot of sense when dealing with customizations. Variables can include markdown, but in our experience it's limited to hyperlinks and some basic formatting.
+When using Quarto variables, the markdown formatting is sometimes not applied correctly ([#5110](https://github.com/quarto-dev/quarto-cli/issues/5110)).
 
-This has been tested with Quarto v1.3.310.
-
-This repo goes with [#5110](https://github.com/quarto-dev/quarto-cli/issues/5110).
+## Build
 
 The `README.md` in this repo is generated using the following command:
 
@@ -17,63 +15,182 @@ The `README.md` in this repo is generated using the following command:
 quarto render -o README.md -t gfm
 ```
 
+This has been tested with Quarto v1.3.310.
+
 ## Examples
 
 The following are all fetched from `_variables.yml` that is available in this repository.
 
 Below, we use the `{{{< var ... >}}}` syntax to include these variables in the text:
 
+---
+
 ### Simple text
 
-A simple string variable:
+#### Code
 
-:::{.bg-light}
+```
 {{< var text >}}
-:::
+```
+
+#### Expected result
+
+Some text
+
+#### Result
+
+{{< var text >}}
+
+---
 
 ### Bold text
 
-:::{.bg-light}
+#### Code
+
+```
 {{< var bold >}}
-:::
+```
+
+#### Expected result
+
+**bold text**
+
+#### Result
+
+{{< var bold >}}
+
+---
 
 ### Emphasis
 
-:::{.bg-light}
+#### Code
+
+```
 {{< var emph >}}
-:::
+```
+
+#### Expected result
+
+_emphasis_
+
+#### Result
+
+{{< var emph >}}
+
+---
 
 ### Bullets
 
-A bullet list:
+#### Code
 
-:::{.bg-light}
+```
 {{< var bullets >}}
-:::
+```
+
+#### Expected result
+
+- This is item 1
+- This is item 2
+
+#### Result
+
+{{< var bullets >}}
+
+---
 
 ### Multiline
 
-:::{.bg-light}
-{{< var multiline >}}
-:::
+#### Code
 
-### Code
+```
+{{< var multiline >}}
+```
+
+#### Expected result
+
+This is a multiline block.
+
+Keep in mind the indentation or add it explicitly in the YAML input.
+
+#### Result
+
+{{< var multiline >}}
+
+---
+
+### Inline code
+
+#### Code
+
+```
+{{< var inline_code >}}
+```
+
+#### Expected result
+
+`one two three`
+
+#### Result
+
+{{< var inline_code >}}
+
+---
+
+### Code block
 
 This is interesting, the multiline fenced code block is not rendered as it should, although syntax highlighting is applied depending on the markdown variant:
 
-:::{.bg-dark}
-{{< var code >}}
-:::
+#### Code
+
+```
+{{< var code_block >}}
+```
+
+#### Expected result
+
+```js
+const a = [ 1, 2, 3 ]
+a.map( el =el + 1)
+```
+
+#### Result
+
+{{< var code_block >}}
+
+---
 
 ### Title
 
-:::{.bg-light}
+#### Code
+
+```
 {{< var title >}}
-:::
+```
+
+#### Expected result
+
+### A title
+
+#### Result
+
+{{< var title >}}
+
+---
 
 ### Title in multiline string
 
-:::{.bg-light}
-{{< var other_title >}}
-:::
+#### Code
 
+```
+{{< var other_title >}}
+```
+
+#### Expected result
+
+### Title in multiline string
+
+And some content after the title
+
+#### Result
+
+{{< var other_title >}}
