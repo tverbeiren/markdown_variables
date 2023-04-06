@@ -72,7 +72,8 @@ Keep in mind the indentation or add it explicitly in the YAML input.
 ### Code
 
 This is interesting, the multiline fenced code block is not rendered as
-it should, although syntax highlighting is applied:
+it should, although syntax highlighting is applied depending on the
+markdown variant:
 
 <div class="bg-dark">
 

@@ -57,7 +57,7 @@ A bullet list:
 
 ### Code
 
-This is interesting, the multiline fenced code block is not rendered as it should, although syntax highlighting is applied:
+This is interesting, the multiline fenced code block is not rendered as it should, although syntax highlighting is applied depending on the markdown variant:
 
 :::{.bg-dark}
 {{< var code >}}
