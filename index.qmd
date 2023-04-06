@@ -1,5 +1,5 @@
 ---
-title: Issue #5110
+title: Issue 5110
 subtitle: Include markdown content as Quarto variables
 ---
 
