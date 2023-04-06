@@ -1,4 +1,4 @@
-# Issue …
+# Issue
 
 ## Introduction
 
@@ -9,6 +9,9 @@ markdown, but in our experience it’s limited to hyperlinks and some
 basic formatting.
 
 This has been tested with Quarto v1.3.310.
+
+This repo goes with
+[\#5110](https://github.com/quarto-dev/quarto-cli/issues/5110).
 
 The `README.md` in this repo is generated using the following command:
 
