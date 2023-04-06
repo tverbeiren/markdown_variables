@@ -1,5 +1,4 @@
-Issue 5110
-================
+# Issue 5110
 
 ## Introduction
 
@@ -116,8 +115,8 @@ Keep in mind the indentation or add it explicitly in the YAML input.
 
 #### Result
 
-This is a multiline block. ¶ Keep in mind the indentation or add it
-explicitly in the YAML input.
+This is a multiline block.  
+Keep in mind the indentation or add it explicitly in the YAML input.
 
 ------------------------------------------------------------------------
 
@@ -155,7 +154,7 @@ markdown variant:
 
 ``` js
 const a = [ 1, 2, 3 ]
-a.map( el =el + 1)
+a.map( el => el + 1)
 ```
 
 #### Result
@@ -199,4 +198,5 @@ And some content after the title
 
 #### Result
 
-Title in multiline string ¶ And some content after the title
+Title in multiline string  
+And some content after the title
