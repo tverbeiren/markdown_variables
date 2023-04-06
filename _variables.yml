@@ -1,0 +1,24 @@
+text: "Some text"
+bold: "**bold text**"
+emph: "_emphasis_"
+multiline: |
+  This is a multiline block.
+  
+  Keep in mind the indentation or add it explicitly in the YAML input.
+bullets: |
+  - This is item 1
+  - This is item 2
+code: |
+
+  ```js
+  const a = [ 1, 2, 3 ]
+  a.map( el => el + 1)
+  ```
+
+title: "### A title"
+other_title: |
+  
+  ### Title in multiline string
+  
+  And some content after the title
+
