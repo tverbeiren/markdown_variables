@@ -8,7 +8,8 @@ multiline: |
 bullets: |
   - This is item 1
   - This is item 2
-code: |
+inline_code: "`one two three`"
+code_block: |
 
   ```js
   const a = [ 1, 2, 3 ]
