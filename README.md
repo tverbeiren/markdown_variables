@@ -31,7 +31,9 @@ the text:
 
 #### Code
 
-    Some text
+``` markdown
+{{< var text >}}
+```
 
 #### Expected result
 
@@ -47,7 +49,9 @@ Some text
 
 #### Code
 
-    bold text
+``` markdown
+{{< var bold >}}
+```
 
 #### Expected result
 
@@ -63,7 +67,9 @@ Some text
 
 #### Code
 
-    emphasis
+``` markdown
+{{< var emph >}}
+```
 
 #### Expected result
 
@@ -79,7 +85,9 @@ Some text
 
 #### Code
 
-    This is item 1This is item 2
+``` markdown
+{{< var bullets >}}
+```
 
 #### Expected result
 
@@ -96,7 +104,9 @@ This is item 1This is item 2
 
 #### Code
 
-    This is a multiline block. ¶ Keep in mind the indentation or add it explicitly in the YAML input.
+``` markdown
+{{< var multiline >}}
+```
 
 #### Expected result
 
@@ -115,7 +125,9 @@ explicitly in the YAML input.
 
 #### Code
 
-    one two three
+``` markdown
+{{< var inline_code >}}
+```
 
 #### Expected result
 
@@ -135,8 +147,9 @@ markdown variant:
 
 #### Code
 
-    const a = [ 1, 2, 3 ]
-    a.map( el => el + 1)
+``` markdown
+{{< var code_block >}}
+```
 
 #### Expected result
 
@@ -156,7 +169,9 @@ a.map( el => el + 1)`
 
 #### Code
 
-    ### A title
+``` markdown
+{{< var title >}}
+```
 
 #### Expected result
 
@@ -172,7 +187,9 @@ a.map( el => el + 1)`
 
 #### Code
 
-    Title in multiline string ¶ And some content after the title
+``` markdown
+{{< var other_title >}}
+```
 
 #### Expected result
 
